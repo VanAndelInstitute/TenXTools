@@ -12,6 +12,8 @@ path <- "./H7AGG"
 gbm <- load_cellranger_matrix(path)
 analysis_results <- load_cellranger_analysis_results(path)
 
+source("TenXTools.R")
+
 # look up some genes and use them to annotate a TSNE plot
 tsne_proj <- analysis_results$tsne
 data <- tenXsym(gbm, c("TNNT2", "ACTN1", "SIRPA", "NKX2-5", "SHOX2"))
